@@ -4,14 +4,146 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Border Radius Previewer</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="hero is-info is-fullheight">
     <main class="container is-fluid">
-        <div class="tabs is-toggle is-centered mt-4">
+        <nav class="tabs is-toggle is-centered mt-4">
             <ul>
               <li><a href="index.html">Simple</a></li>
               <li class="is-active"><a>Advanced</a></li>
             </ul>
-        </div>    
+        </nav>
+
+        <div class="columns is-centered">
+            <section class="column is-narrow">
+                <div class="container is-justify-content-flex-end">
+                    <div class="test-box has-background-dark" id="preview-box" style="width: 400px; height: 400px;">
+                        <span>Preview box</span>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="column is-narrow">
+                <div class="box">
+                    <div id="simple-conf-box">
+                        <div class="block columns">
+                            <div class="column">
+                                <label>Width (px)</label>
+                                <div>
+                                    <input id="width-input" class="input" type="number" value="400">
+                                </div>
+                            </div>
+                            <div class="column">
+                                <label>Height (px)</label>
+                                <div>
+                                    <input id="height-input" class="input" type="number" value="400">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="block">
+                            <h2 class="is-size-4 has-text-centered">Bottom Left</h2>
+                            <div class="level mb-1">
+                                <label class="level-left ml-2">Left dot</label>
+                                <label class="level-right mr-2">Bottom dot</label>
+                            </div>
+                            <div class="block columns is-vcentered">
+                                <div class="column is-narrow">
+                                    <input id="bottomLeft-left-input" name="border-input" class="input" type="number" value="0" min="0">
+                                </div>
+                                <div class="column">
+                                    <input type="checkbox">
+                                </div>
+                                <div class="column is-narrow">
+                                    <input id="bottomLeft-bottom-input" name="border-input" class="input" type="number" value="0" min="0">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="block">
+                            <h2 class="is-size-4 has-text-centered">Bottom Left</h2>
+                            <div class="level mb-1">
+                                <label class="level-left ml-2">Left dot</label>
+                                <label class="level-right mr-2">Bottom dot</label>
+                            </div>
+                            <div class="block columns is-vcentered">
+                                <div class="column is-narrow">
+                                    <input id="bottomLeft-left-input" name="border-input" class="input" type="number" value="0" min="0">
+                                </div>
+                                <div class="column">
+                                    <input type="checkbox">
+                                </div>
+                                <div class="column is-narrow">
+                                    <input id="bottomLeft-bottom-input" name="border-input" class="input" type="number" value="0" min="0">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="block">
+                            <h2 class="is-size-4 has-text-centered">Bottom Left</h2>
+                            <div class="level mb-1">
+                                <label class="level-left ml-2">Left dot</label>
+                                <label class="level-right mr-2">Bottom dot</label>
+                            </div>
+                            <div class="block columns is-vcentered">
+                                <div class="column is-narrow">
+                                    <input id="bottomLeft-left-input" name="border-input" class="input" type="number" value="0" min="0">
+                                </div>
+                                <div class="column">
+                                    <input type="checkbox">
+                                </div>
+                                <div class="column is-narrow">
+                                    <input id="bottomLeft-bottom-input" name="border-input" class="input" type="number" value="0" min="0">
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="block">
+                            <h2 class="is-size-4 has-text-centered">Bottom Left</h2>
+                            <div class="level mb-1">
+                                <label class="level-left ml-2">Left dot</label>
+                                <label class="level-right mr-2">Bottom dot</label>
+                            </div>
+                            <div class="block columns is-vcentered">
+                                <div class="column is-narrow">
+                                    <input id="bottomLeft-left-input" name="border-input" class="input" type="number" value="0" min="0">
+                                </div>
+                                <div class="column">
+                                    <input type="checkbox">
+                                </div>
+                                <div class="column is-narrow">
+                                    <input id="bottomLeft-bottom-input" name="border-input" class="input" type="number" value="0" min="0">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="container pb-6">
+            <section class="columns is-centered">
+                <div class="box column is-narrow">
+                    <div class="mb-3 level is-fullwidth">
+                        <div class="level-left">
+                            <span class="title has-text-dark">CSS Code</span>
+                        </div>
+                        <div class="level-right">
+                            <button id="copy-css-button" class="button is-primary">Copy</button>
+                        </div>
+                    </div>
+                    <div class="box has-background-dark" style="min-width: 400px;">
+                        <span id="css-result-span" class="has-text-white">
+                            border-radius<a class="css-grey">:</a> <a class="css-violet">0px</a><a class="css-grey">;</a>
+                        </span>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+<script src="js/advancedConfig.js"></script>
 </body>
 </html>

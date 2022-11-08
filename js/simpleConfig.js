@@ -50,9 +50,19 @@ borderInputs.forEach(element => {
 //Copy CSS code________________________________________________________________
 const copyCSSButton = document.getElementById("copy-css-button");
 
-copyCSSButton.addEventListener("click", () => {
-    navigator.clipboard.writeText(cssResultSpan.innerText);
-    alert("Property copied to clipboard.")
+copyCSSButton.addEventListener("click", async () => {
+    try {
+        let copyText = cssResultSpan.innerText != "" ? cssResultSpan.innerText : "border-radius: 0px;";
+        
+        console.log(copyText)
+
+        await navigator.clipboard.writeText(copyText)
+        
+        console.log('Content copied to clipboard');
+        alert("Property copied to clipboard.");
+    } catch (err) {
+        console.error('Failed to copy: ', err);
+    }
 });
 
 //Functions ______________________________________________________________
