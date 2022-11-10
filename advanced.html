@@ -28,13 +28,13 @@
                 <div class="box">
                     <div id="simple-conf-box">
                         <div class="block columns">
-                            <div class="column">
+                            <div class="column is-narrow is-flex-direction-column">
                                 <label>Width (px)</label>
                                 <div>
                                     <input id="width-input" class="input" type="number" value="400">
                                 </div>
                             </div>
-                            <div class="column">
+                            <div class="column is-narrow is-flex-direction-column">
                                 <label>Height (px)</label>
                                 <div>
                                     <input id="height-input" class="input" type="number" value="400">
@@ -43,78 +43,93 @@
                         </div>
 
                         <div class="block">
-                            <h2 class="is-size-4 has-text-centered">Bottom Left</h2>
-                            <div class="level mb-1">
-                                <label class="level-left ml-2">Left dot</label>
-                                <label class="level-right mr-2">Bottom dot</label>
-                            </div>
-                            <div class="block columns is-vcentered">
+                            <h2 class="is-size-5">Top Left</h2>
+                            <div class="block columns is-centered is-vcentered">
                                 <div class="column is-narrow">
-                                    <input id="bottomLeft-left-input" name="border-input" class="input" type="number" value="0" min="0">
+                                    <input class="link-checkbox" type="checkbox" id="top_left-checkbox" name="checkbox-link" checked>
+                                    <label for="top_left-checkbox" class="checkmark">
+                                        <img class="icon unchecked" src="icons/ic_outline-link-off.svg" alt="">
+                                        <img class="icon checked" src="icons/ic_outline-link.svg" alt="">
+                                    </label>
                                 </div>
-                                <div class="column">
-                                    <input type="checkbox">
-                                </div>
-                                <div class="column is-narrow">
-                                    <input id="bottomLeft-bottom-input" name="border-input" class="input" type="number" value="0" min="0">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="block">
-                            <h2 class="is-size-4 has-text-centered">Bottom Left</h2>
-                            <div class="level mb-1">
-                                <label class="level-left ml-2">Left dot</label>
-                                <label class="level-right mr-2">Bottom dot</label>
-                            </div>
-                            <div class="block columns is-vcentered">
-                                <div class="column is-narrow">
-                                    <input id="bottomLeft-left-input" name="border-input" class="input" type="number" value="0" min="0">
-                                </div>
-                                <div class="column">
-                                    <input type="checkbox">
-                                </div>
-                                <div class="column is-narrow">
-                                    <input id="bottomLeft-bottom-input" name="border-input" class="input" type="number" value="0" min="0">
+                                <div class="column is-flex-direction-column">
+                                    <div>
+                                        <input id="top_left-top-input" name="border-range" type="range" value="0" max="100">
+                                        <span id="top_left-top-input-span" name="range-value-span" class="ml-3">0%</span>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input id="top_left-left-input" name="border-range" type="range" value="0" max="100">
+                                        <span id="top_left-left-input-span" name="range-value-span" class="ml-3">0%</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="block">
-                            <h2 class="is-size-4 has-text-centered">Bottom Left</h2>
-                            <div class="level mb-1">
-                                <label class="level-left ml-2">Left dot</label>
-                                <label class="level-right mr-2">Bottom dot</label>
-                            </div>
-                            <div class="block columns is-vcentered">
+                            <h2 class="is-size-5">Top Right</h2>
+                            <div class="block columns is-centered is-vcentered">
                                 <div class="column is-narrow">
-                                    <input id="bottomLeft-left-input" name="border-input" class="input" type="number" value="0" min="0">
+                                    <input class="link-checkbox" type="checkbox" id="top_right-checkbox" name="checkbox-link" checked>
+                                    <label for="top_right-checkbox" class="checkmark">
+                                        <img class="icon unchecked" src="icons/ic_outline-link-off.svg" alt="">
+                                        <img class="icon checked" src="icons/ic_outline-link.svg" alt="">
+                                    </label>
                                 </div>
-                                <div class="column">
-                                    <input type="checkbox">
-                                </div>
-                                <div class="column is-narrow">
-                                    <input id="bottomLeft-bottom-input" name="border-input" class="input" type="number" value="0" min="0">
+                                <div class="column is-flex-direction-column">
+                                    <div>
+                                        <input id="top_right-top-input" name="border-range" type="range" value="0" max="100">
+                                        <span id="top_right-top-input-span" name="range-value-span" class="ml-3">0%</span>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input id="top_right-right-input" name="border-range" type="range" value="0" max="100">
+                                        <span id="top_right-right-input-span" name="range-value-span" class="ml-3">0%</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        
                         <div class="block">
-                            <h2 class="is-size-4 has-text-centered">Bottom Left</h2>
-                            <div class="level mb-1">
-                                <label class="level-left ml-2">Left dot</label>
-                                <label class="level-right mr-2">Bottom dot</label>
+                            <h2 class="is-size-5">Bottom Left</h2>
+                            <div class="block columns is-centered is-vcentered">
+                                <div class="column is-narrow">
+                                    <input class="link-checkbox" type="checkbox" id="bottom_left-checkbox" name="checkbox-link" checked>
+                                    <label for="bottom_left-checkbox" class="checkmark">
+                                        <img class="icon unchecked" src="icons/ic_outline-link-off.svg" alt="">
+                                        <img class="icon checked" src="icons/ic_outline-link.svg" alt="">
+                                    </label>
+                                </div>
+                                <div class="column is-flex-direction-column">
+                                    <div>
+                                        <input id="bottom_left-top-input" name="border-range" type="range" value="0" max="100">
+                                        <span id="bottom_left-top-input-span" name="range-value-span" class="ml-3">0%</span>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input id="bottom_left-left-input" name="border-range" type="range" value="0" max="100">
+                                        <span id="bottom_left-left-input-span" name="range-value-span" class="ml-3">0%</span>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="block columns is-vcentered">
+                        </div>
+
+                        <div class="block">
+                            <h2 class="is-size-5">Bottom Right</h2>
+                            <div class="block columns is-centered is-vcentered">
                                 <div class="column is-narrow">
-                                    <input id="bottomLeft-left-input" name="border-input" class="input" type="number" value="0" min="0">
+                                    <input class="link-checkbox" type="checkbox" id="bottom_right-checkbox" name="checkbox-link" checked>
+                                    <label for="bottom_right-checkbox" class="checkmark">
+                                        <img class="icon unchecked" src="icons/ic_outline-link-off.svg" alt="">
+                                        <img class="icon checked" src="icons/ic_outline-link.svg" alt="">
+                                    </label>
                                 </div>
-                                <div class="column">
-                                    <input type="checkbox">
-                                </div>
-                                <div class="column is-narrow">
-                                    <input id="bottomLeft-bottom-input" name="border-input" class="input" type="number" value="0" min="0">
+                                <div class="column is-flex-direction-column">
+                                    <div>
+                                        <input id="bottom_right-top-input" name="border-range" type="range" value="0" max="100">
+                                        <span id="bottom_right-top-input-span" name="range-value-span" class="ml-3">0%</span>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input id="bottom_right-right-input" name="border-range" type="range" value="0" max="100">
+                                        <span id="bottom_right-right-input-span" name="range-value-span" class="ml-3">0%</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -136,7 +151,7 @@
                     </div>
                     <div class="box has-background-dark" style="min-width: 400px;">
                         <span id="css-result-span" class="has-text-white">
-                            border-radius<a class="css-grey">:</a> <a class="css-violet">0px</a><a class="css-grey">;</a>
+                            border-radius<a class="css-grey">:</a> <a class="css-violet">0</a><a class="css-grey">;</a>
                         </span>
                     </div>
                 </div>
@@ -144,6 +159,6 @@
         </div>
     </main>
 
-<script src="js/advancedConfig.js"></script>
+<script type="module" src="js/advancedConfig.js"></script>
 </body>
 </html>

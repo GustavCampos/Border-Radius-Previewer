@@ -4,13 +4,15 @@
     align-items: center;
 }
 
+
+/*CSS code colors______________________________________*/
 .css-grey {color: grey !important;}
 .css-violet {color: #929de7 !important;}
 
-
+/*Custom Input Range______________________________________*/
 input[type="range"] {
     -webkit-appearance:none !important;
-    width: 75%;
+    width: 85%;
     height: .3125rem;
     border-radius: .625rem;
     background-color: #f5f5f5;
@@ -30,4 +32,26 @@ input[type="range"]::-webkit-slider-thumb:hover {
     -webkit-appearance: none !important;
     background-color: #3e8ed0;
     cursor: pointer;
+}
+
+/*Custom Checkbox_______________________________________*/
+.link-checkbox {
+    position: absolute;
+    display: none;
+}
+
+.checkmark:hover {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.link-checkbox + .checkmark > img.checked, 
+.link-checkbox:checked + .checkmark > img.unchecked {
+    display: none;
+}
+
+
+.link-checkbox:checked + .checkmark > img.checked, 
+.link-checkbox + .checkmark > img.unchecked {
+    display: block;
 }

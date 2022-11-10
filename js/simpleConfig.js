@@ -1,3 +1,6 @@
+
+import {calculateBorderRadiusCSScode} from "./functions.js";
+
 const previewBox = document.getElementById("preview-box");
 const cssResultSpan = document.getElementById("css-result-span");
 
@@ -64,54 +67,3 @@ copyCSSButton.addEventListener("click", async () => {
         console.error('Failed to copy: ', err);
     }
 });
-
-//Functions ______________________________________________________________
-function calculateBorderRadiusCSScode(element) {
-    const topLeftRadius = element.style.borderTopLeftRadius;
-    const topRightRadius = element.style.borderTopRightRadius;
-    const bottomLeftRadius = element.style.borderBottomLeftRadius;
-    const bottomRightRadius = element.style.borderBottomRightRadius;
-    
-    const allBordersIsEqual = (topLeftRadius == topRightRadius) && 
-                            (bottomLeftRadius == bottomRightRadius) &&
-                            (topLeftRadius == bottomRightRadius);
-
-    const firstGroupIsEqual = (topLeftRadius == bottomRightRadius);
-    const secondGroupIsEqual = (topRightRadius == bottomLeftRadius);
-    
-    console.log(firstGroupIsEqual)
-    console.log(secondGroupIsEqual)
-
-    if (allBordersIsEqual) {return createBorderRadiusCSS(topLeftRadius)}
-
-    if (firstGroupIsEqual && secondGroupIsEqual) {return createBorderRadiusCSS(returnBorders(element, 2));}
-
-    if (secondGroupIsEqual) {return createBorderRadiusCSS(returnBorders(element, 3));}
-
-    return createBorderRadiusCSS(returnBorders(element));
-}
-
-function createBorderRadiusCSS(value) {
-    if (value == "" || value == 0) {
-        return 'border-radius<a class="css-grey">:</a> <a class="css-violet">0px</a><a class="css-grey">;</a>';
-    }
-
-    return `border-radius<a class="css-grey">:</a> <a class="css-violet">${value}</a><a class="css-grey">;</a>`;
-}
-
-function returnBorders(element, n=4) {
-    let validationList = [element.style.borderTopLeftRadius, element.style.borderTopRightRadius, element.style.borderBottomLeftRadius, element.style.borderBottomRightRadius];
-
-    for (let i = 0; i < validationList.length; i++) {
-        validationList[i] = validationList[i] != "" ? validationList[i] : "0px";
-    }
-
-    switch(n) {
-        case 2:
-            return `${validationList[0]} ${validationList[1]}`;
-        case 3:
-            return `${validationList[0]} ${validationList[1]} ${validationList[3]}`;
-        default:
-            return `${validationList[0]} ${validationList[1]} ${validationList[2]} ${validationList[3]}`;
-    }
-}
